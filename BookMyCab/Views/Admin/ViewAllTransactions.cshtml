@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BookMyCab.Models.TransactionEntity>
+
+@{
+    ViewBag.Title = "Transactions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Transactions</h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Customer Id</th>
+        <th>Transaction Id</th>
+        <th>Transaction Date</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Driver Id</th>
+    </tr>
+
+    @foreach (var transaction in Model) 
+     {
+        <tr>
+            <td>@transaction.PartitionKey</td>
+            <td>@transaction.RowKey</td>
+            <td>@transaction.TransactionDate</td>
+            <td>@transaction.Type</td>
+            <td>@transaction.Amount</td>
+            <td>@transaction.DriverId</td>
+        </tr>
+     }
+
+</table>
+

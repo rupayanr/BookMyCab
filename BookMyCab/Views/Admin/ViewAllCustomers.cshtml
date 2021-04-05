@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BookMyCab.Models.CustomerEntity>
+@{
+    ViewBag.Title = "Customer Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View Customers</h2>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Customer Id</th>
+        <th>Name</th>
+        <th>Wallet Balance</th>
+        <th>Address</th>
+        <th>Offer%</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var customer in Model)
+    {
+        <tr>
+
+            <td>@customer.RowKey
+            <td>@customer.CustomerName</td>
+            <td>@customer.Balance</td>
+            <td>@customer.Address</td>
+            <td>@customer.Offer</td>
+            <td></td>
+
+        </tr>
+    }
+</table>
+
+

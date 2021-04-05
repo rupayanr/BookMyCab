@@ -1,0 +1,31 @@
+﻿
+@model IEnumerable<BookMyCab.Models.DriverDetail>
+
+@{
+    ViewBag.Title = "ViewAllDrivers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View Drivers</h2>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Driver Id</th>
+        <th>Name</th>
+        <th>Contact Number</th>
+        <th>Rating</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var driver in Model)
+    {
+        <tr>
+            <td>@driver.DriverId</td>
+            <td>@driver.Name</td>
+            <td>@driver.ContactNumber</td>
+            <td>@driver.Rating</td>
+            <td>@driver.Status</td>
+        </tr>
+    }
+</table>
+
+
