@@ -26,7 +26,7 @@ namespace BookMyCab
         {
             try
             {
-                storageAccount = new CloudStorageAccount(new StorageCredentials("azuretoragedemoaccount", "XUBAAhvfVfRtAMpP2fCA0pd/8KxVwEgK8Ox9q8OdzplkujANzi3D2qX8IUtB4QxgJUdiFJuFG2ROx7GMTZWiqA=="), true);
+                storageAccount = new CloudStorageAccount(new StorageCredentials("<name of your storage accnt>", "<creds of your storage account>"), true);
                 tableClient = storageAccount.CreateCloudTableClient();
                 transactionTable = tableClient.GetTableReference("Transaction");
                 customerTable = tableClient.GetTableReference("Customer");
